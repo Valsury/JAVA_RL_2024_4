@@ -2,14 +2,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        MyDate currentDate = new MyDate();
+        System.out.println("Текущая дата:");
+        System.out.println("Год: " + currentDate.getYear());
+        System.out.println("Месяц: " + (currentDate.getMonth() + 1)); // +1, так как месяцы начинаются с 0
+        System.out.println("День: " + currentDate.getDay());
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        MyDate specificDate = new MyDate(34355555133101L);
+        System.out.println("\nДата для указанного времени:");
+        System.out.println("Год: " + specificDate.getYear());
+        System.out.println("Месяц: " + (specificDate.getMonth() + 1)); // +1, так как месяцы начинаются с 0
+        System.out.println("День: " + specificDate.getDay());
     }
 }
